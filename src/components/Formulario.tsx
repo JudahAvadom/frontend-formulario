@@ -46,6 +46,7 @@ const Formulario = () => {
                 <input 
                     type="text"
                     value={nombre}
+                    // @ts-ignore
                     onChange={(e) => setNombre(e.target.value)}
                     placeholder="Nombre" 
                     className={classInput} 
@@ -54,16 +55,19 @@ const Formulario = () => {
                     type="text"
                     value={apellido}
                     placeholder="Apellido" 
+                    // @ts-ignore
                     onChange={(e) => setApellido(e.target.value)}
                     className={classInput} 
                 />
                 <select 
                     className="outline-none border-2 border-gray-600 p-1 m-1 rounded-lg"
                     value={pais}
+                    // @ts-ignore
                     onChange={(e) => setPais(e.target.value)}
                 >
                     <option value="">PAIS</option>
                     {
+                        // @ts-ignore
                         paises.map((e: any, key: any) => (
                             <option 
                                 key={key} 

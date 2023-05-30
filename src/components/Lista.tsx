@@ -3,7 +3,6 @@ import axios from 'axios'
 const api = import.meta.env.VITE_API
 
 const Lista = () => {
-    const [loading, setLoading] = useState(true);
     const [user, setUsers] = useState()
     const getUser = async () => {
         const rs = await axios.get(`${api}/lista`)
@@ -11,9 +10,7 @@ const Lista = () => {
         console.log(user);
     }
     useEffect(() => {
-        setLoading(true);
         getUser()
-        setLoading(false);
     }, [])
     return !user ? <></> : (
         <div className="p-4">
@@ -28,6 +25,7 @@ const Lista = () => {
                 </thead>
                 <tbody>
                     {
+                        // @ts-ignore
                         user.map((e: any, key: any) => (
                             <tr key={key}>
                                 <td className="px-1">{e.usuario_id}</td>
