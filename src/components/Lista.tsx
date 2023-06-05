@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
-const api = "https://registroprueba.azurewebsites.net/"
+const api = "https://registroprueba.azurewebsites.net"
 
 const Lista = () => {
     const [user, setUsers] = useState()
