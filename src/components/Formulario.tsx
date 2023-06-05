@@ -32,10 +32,12 @@ const Formulario = () => {
             alert("Rellene todos los campos")
         }
         else {
-            axios.post("http://localhost:4000/usuario", {
+            axios.post("https://registroprueba.azurewebsites.net/usuario", {
                 nombre,
                 apellido,
                 pais
+            },{
+                headers: {"Access-Control-Allow-Origin": "*"}
             })
             window.location.href="/"
         }

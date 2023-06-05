@@ -5,7 +5,9 @@ const api = "https://registroprueba.azurewebsites.net"
 const Lista = () => {
     const [user, setUsers] = useState()
     const getUser = async () => {
-        const rs = await axios.get(`${api}/lista`)
+        const rs = await axios.get(`${api}/lista`, {
+            headers: {"Access-Control-Allow-Origin": "*"}
+        })
         setUsers(rs.data)
         console.log(user);
     }
