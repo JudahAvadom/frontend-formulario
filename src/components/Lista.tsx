@@ -6,7 +6,7 @@ const Lista = () => {
     const [user, setUsers] = useState()
     const getUser = async () => {
         const rs = await axios.get(`${api}/lista`, {
-            headers: {"Access-Control-Allow-Origin": "*"}
+            headers: {"Access-Control-Allow-Origin": "https://registroprueba.azurewebsites.net"}
         })
         setUsers(rs.data)
         console.log(user);

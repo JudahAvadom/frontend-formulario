@@ -37,7 +37,10 @@ const Formulario = () => {
                 apellido,
                 pais
             },{
-                headers: {"Access-Control-Allow-Origin": "*"}
+                headers: {
+                    "Access-Control-Allow-Methods":'POST, GET',
+                    "Access-Control-Allow-Origin": "https://registroprueba.azurewebsites.net"
+                }
             })
             window.location.href="/"
         }
